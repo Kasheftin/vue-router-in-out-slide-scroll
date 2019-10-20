@@ -1,0 +1,44 @@
+html, body {
+  overflow: hidden;
+}
+
+.fill-height-min {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slideable-page {
+  position: fixed;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 2;
+}
+
+.slide-right-enter-active {
+  transition: transform 0.5s ease;
+}
+
+.slide-right-enter {
+  transform: translateX(100%);
+}
+
+.slide-left-enter {
+  z-index: 1;
+}
+
+.slide-left-enter-active {
+  z-index: 1;
+}
+
+.slide-left-leave-active {
+  transition: transform 1s ease;
+  z-index: 3;
+}
+
+.slide-left-leave-to {
+  transform: translateX(100%);
+}
